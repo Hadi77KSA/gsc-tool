@@ -9,18 +9,24 @@ namespace xsk::arc::t7
 {
 
 extern std::array<std::pair<u16, opcode>, code_count> const code_list;
+extern std::array<std::pair<u32, char const*>, string_hash_count> const string_hash_list;
 extern std::array<std::pair<u32, char const*>, hash_count> const hash_list;
 
 context::context(arc::instance inst) : arc::context(feature::header72 | feature::size64 | feature::hashids | feature::devstr | feature::spaces | feature::refvarg | feature::foreach, engine::t7, endian::little, system::pc, inst, header_magic)
 {
     code_map_.reserve(code_list.size());
     code_map_rev_.reserve(code_list.size());
-    hash_map_.reserve(hash_list.size());
+    hash_map_.reserve(string_hash_list.size() + hash_list.size());
 
     for (auto const& entry : code_list)
     {
         code_map_.insert({ entry.first, entry.second });
         code_map_rev_.insert({ entry.second, entry.first });
+    }
+
+    for (auto const& entry : string_hash_list)
+    {
+        hash_map_.insert({ entry.first, entry.second });
     }
 
     for (auto const& entry : hash_list)
