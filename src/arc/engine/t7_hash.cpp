@@ -8,6 +8,45 @@
 namespace xsk::arc::t7
 {
 
+extern std::array<std::pair<u32, char const*>, string_hash_count> const string_hash_list
+{{
+    { 0x7B543E98, "on_actor_damage" },
+    { 0x8C38C12E, "on_actor_killed" },
+    { 0xEB4A4369, "on_ai_damage" },
+    { 0xFC2EC5FF, "on_ai_killed" },
+    { 0xF96CA9BC, "on_ai_spawned" },
+    { 0xB286C65C, "on_challenge_complete" },
+    { 0x390259D9, "on_entity_shutdown" },
+    { 0x36FB1B1A, "on_finalize_initialization" },
+    { 0x4C5AE192, "on_joined_spectate" },
+    { 0x95A6C4C0, "on_joined_team" },
+    { 0x33BBA039, "on_loadout" },
+    { 0xDA8D7D74, "on_localclient_connect" },
+    { 0xE64327A6, "on_localclient_shutdown" },
+    { 0x842E788A, "on_localplayer_spawned" },
+    { 0xEAFFEA17, "on_player_connect" },
+    { 0xFEFE13F5, "on_player_connecting" },
+    { 0xAB5ECF6C, "on_player_damage" },
+    { 0xAEBDD257, "on_player_disconnect" },
+    { 0xBC435202, "on_player_killed" },
+    { 0x6751AB5B, "on_player_laststand" },
+    { 0xBC12B61F, "on_player_spawned" },
+    { 0xECC6AECF, "on_pre_initialization" },
+    { 0xCC62ACCA, "on_start_gametype" },
+    { 0x9BD1E27F, "on_vehicle_damage" },
+    { 0xACB66515, "on_vehicle_killed" },
+    { 0xBAE82B92, "on_vehicle_spawned" },
+    { 0xCBCFA831, "previousRouletteWeapon1" },
+    { 0xCBCFA832, "previousRouletteWeapon2" },
+    { 0x9F129A92, "rouletteAllowSpin" },
+    { 0x65987563, "rouletteWeapon" },
+    { 0xC5C4A13F, "thiefAllowFlip" },
+    { 0xC35F137F, "thiefWeapon" },
+    { 0x5C5E3658, "thiefWeaponOption" },
+    { 0x476984C8, "thiefWeaponStolenFrom" },
+    { 0x6DE3AEFA, "thief_weapon_option_body_index" },
+}};
+
 extern std::array<std::pair<u32, char const*>, hash_count> const hash_list
 {{
     { 0x33B293FD, "" },
