@@ -12,8 +12,8 @@ namespace xsk::arc::t7
 {
 
 constexpr usize code_count = 16384;
-constexpr usize string_hash_count = 35;
-constexpr usize hash_count = 198168;
+constexpr usize string_hash_count = 37;
+constexpr usize hash_count = 198196;
 constexpr u64 header_magic = 0x1C000A0D43534780;
 
 struct context : public arc::context
